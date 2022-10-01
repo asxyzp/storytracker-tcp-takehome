@@ -19,8 +19,8 @@ const StoryDisplay = (props) => {
             {
                 stories.length === 0 ?
                 <div className="h-100 flex-grow d-flex flex-column justify-content-center align-items-center w-100 h-100">
-                    <img src={Taken} className="w-25" />
-                    <span className="small fw-bold mt-2">NO STORIES TO SEE HERE</span>
+                    <img src={Taken} className="w-25" alt="Aliens taking something"/>
+                    <span className="h4 fw-bold mt-3">No stories to see here</span>
                 </div> :
                 <table className="table">
                     <thead>

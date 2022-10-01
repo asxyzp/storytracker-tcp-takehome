@@ -1,8 +1,39 @@
 .flex-grow{
-    flex-grow: 1;
+    width: calc(100vw - 240px);
 }
 
 .sidebar{
     background: rgba(245, 245, 247, 1);
     color: rgba(0, 0, 0, 1);
+    padding: 10px;
+    width: 240px!important;
+}
+.sidebar-menu-container{
+    width: 100%;
+    margin-top: 15px;
+}
+.sidebar-icon{
+    width: fit-content;
+    border-radius: 10px;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.sidebar-menu:hover{
+    background-color: #c6c6c6;
+}
+.sidebar-menu--selected{
+    background-color: #c6c6c6;
+    font-weight: 700;
 }

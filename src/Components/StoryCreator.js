@@ -48,6 +48,7 @@ const StoryCreator = (props) => {
         <div className="flex-grow d-flex justify-content-center align-items-center">
             <form className="border rounded shadow w-75 p-3" onSubmit={submit}>
 
+                <h2 className='fw-bold'>Add a new story</h2>
                 <label
                     htmlFor="username"
                     className="text-dark small fw-bold">

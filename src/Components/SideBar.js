@@ -1,7 +1,7 @@
 //IMPORTING PACKAGES
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BsNewspaper, BsPlusSquareFill } from "react-icons/bs";
+import { Link, useLocation } from 'react-router-dom';
+import { HiNewspaper, HiOutlineNewspaper, HiOutlinePlusCircle, HiPlusCircle } from "react-icons/hi";
 
 /**
  * FUNCTION : SideBar COMPONENT
@@ -11,19 +11,24 @@ import { BsNewspaper, BsPlusSquareFill } from "react-icons/bs";
  */
 const SideBar = (props) => {
 
+    const location = useLocation();
+    const pathname = location.pathname;
+
     return (
-        <div className="w-25 sidebar">
-            <h3 className="d-flex justify-content-center align-items-center fw-bolder p-2 m-0">
-                StoryTracker
-            </h3>
-            <Link to="/" className="d-flex justify-content-center align-items-center lead p-1 text-dark text-decoration-none">
-                <BsNewspaper className="me-2" />
+        <div className="sidebar">
+            <div className="fw-bolder bg-black text-white sidebar-icon h1">
+                St
+            </div>
+            <div className='sidebar-menu-container'>
+            <Link to="/" className={["sidebar-menu lead text-dark text-decoration-none", pathname==='/'?"sidebar-menu--selected":""].join(" ")}>
+                {pathname==='/'?<HiNewspaper className="me-2" />:<HiOutlineNewspaper className="me-2" />}
                 Stories
             </Link>
-            <Link to="/create" className="d-flex justify-content-center align-items-center lead p-1 text-dark text-decoration-none">
-                <BsPlusSquareFill className="me-2" />
+            <Link to="/create" className={["sidebar-menu lead text-dark text-decoration-none", pathname==='/create'?"sidebar-menu--selected":""].join(" ")}>
+                {pathname==='/'?<HiOutlinePlusCircle className="me-2" />:<HiPlusCircle className="me-2" />}
                 Create
             </Link>
+            </div>
         </div>
     );
 }
